@@ -17,9 +17,12 @@
 			<div class="panel-body" style="padding:30px">
 			
 				{{-- TODO: Abrir el formulario e indicar el método POST --}}
+				<form action="" method="POST">
+					
 				
 					{{-- TODO: Protección contra CSRF --}}
-    
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					
     				<div class="form-group">
     					<label for="title">Título</label>
     					<input type="text" name="title" id="title" class="form-control">
@@ -53,7 +56,7 @@
 							Añadir película
 						</button>
 					</div>
-
+				</form>
 				{{-- TODO: Cerrar formulario --}}
                 
 

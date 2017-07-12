@@ -18,8 +18,13 @@
 			
 				{{-- TODO: Abrir el formulario e indicar el método POST --}}
 				{{method_field('PUT')}}
+				<form action="" method="POST">
+					
 					{{-- TODO: Protección contra CSRF --}}
-    
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					<input type="hidden" name="id" value="{{ $pelicula->id }}">
+					<input type="hidden" name="_method" value="PUT" />
+
     				<div class="form-group">
     					<label for="title">Título</label>
     					<input type="text" name="title" id="title" class="form-control" value="{{ $pelicula->title }}">
@@ -55,6 +60,7 @@
 					</div>
 
 				{{-- TODO: Cerrar formulario --}}
+				</form>
                 
 
 			</div>
