@@ -1,1 +1,7 @@
-login.blade.php
+@extends('layouts.master')
+
+@section('content')
+
+    Login
+
+@stop
